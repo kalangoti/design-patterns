@@ -1,16 +1,16 @@
 package com.kti.design.patterns.strategy;
 
-import com.kti.design.patterns.strategy.within.ShippingWithin;
-import com.kti.design.patterns.strategy.within.services.ShippingFedexImpl;
-import com.kti.design.patterns.strategy.within.services.ShippingPacImpl;
-import com.kti.design.patterns.strategy.within.services.ShippingSedexImpl;
-import com.kti.design.patterns.strategy.without.ShippingWithout;
+import com.kti.design.patterns.strategy.solution.ShippingSolution;
+import com.kti.design.patterns.strategy.solution.services.ShippingFedexImpl;
+import com.kti.design.patterns.strategy.solution.services.ShippingPacImpl;
+import com.kti.design.patterns.strategy.solution.services.ShippingSedexImpl;
+import com.kti.design.patterns.strategy.problem.ShippingProblem;
 
 public class StrategyMain {
 
     public static void main(String[] args) {
-        System.out.println("\n*** Testando sem Design Patterns ***");
-        ShippingWithout shippingWithout = new ShippingWithout();
+        System.out.println("\n*** Testando sem Design Patterns (PROBLEM) ***");
+        ShippingProblem shippingWithout = new ShippingProblem();
         try {
             System.out.println("sedex: " + shippingWithout.calculate("sedex", 10f));
             System.out.println("fedex: " + shippingWithout.calculate("fedex", 11f));
@@ -21,10 +21,10 @@ public class StrategyMain {
         }
 
         try {
-            System.out.println("\n*** Testando com Design Patterns ***");
+            System.out.println("\n*** Testando com Design Patterns (SOLUTION) ***");
 
 
-            ShippingWithin shippingWithin = new ShippingWithin(new ShippingSedexImpl());
+            ShippingSolution shippingWithin = new ShippingSolution(new ShippingSedexImpl());
             System.out.println("sedex: " + shippingWithin.calculate(10f));
 
             shippingWithin.setShipping(new ShippingFedexImpl());

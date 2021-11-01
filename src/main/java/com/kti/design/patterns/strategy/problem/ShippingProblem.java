@@ -1,12 +1,12 @@
-package com.kti.design.patterns.strategy.without;
+package com.kti.design.patterns.strategy.problem;
 
-import com.kti.design.patterns.strategy.without.services.*;
+import com.kti.design.patterns.strategy.problem.services.*;
 
-public class ShippingWithout {
+public class ShippingProblem {
 
-    /*
-        Fazendo na mão e quebrando o principio do SOLID -> (O) OPEN-CLOSED PRINCIPLE
-        (Aberto para extensão e fechado para alteração)
+    /**
+     * Fazendo na mão e quebrando o principio do SOLID -> (O) OPEN-CLOSED PRINCIPLE
+     * (Aberto para extensão e fechado para alteração)
      */
     public Float calculate(String service, Float weight) throws Exception {
         Float amount;

@@ -1,16 +1,16 @@
-package com.kti.design.patterns.strategy.without.services;
+package com.kti.design.patterns.strategy.problem.services;
 
 public class ShippingCorreios {
 
     public Float calculaRemessa(String service, Float weight) {
-        float valor = 0f;
+        float amount = 0f;
 
         if (service.equals("PAC")) {
-            valor = 10f * weight;
+            amount = 10f * weight;
         } else if (service.equals("SEDEX")) {
-            valor = 30f * weight;
+            amount = 30f * weight;
         }
 
-        return valor;
+        return amount;
     }
 }

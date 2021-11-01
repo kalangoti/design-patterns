@@ -1,4 +1,4 @@
-package com.kti.design.patterns.strategy.without.services;
+package com.kti.design.patterns.strategy.problem.services;
 
 public class ShippingFedex {
 

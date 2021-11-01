@@ -1,7 +1,10 @@
-package com.kti.design.patterns.strategy.within.services;
+package com.kti.design.patterns.strategy.solution.services;
 
-import com.kti.design.patterns.strategy.without.services.ShippingTnt;
+import com.kti.design.patterns.strategy.problem.services.ShippingTnt;
 
+/**
+ * Strategy "concreta"
+ */
 public class ShippingTntImpl implements IShipping {
 
     @Override
